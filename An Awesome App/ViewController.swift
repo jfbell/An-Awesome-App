@@ -9,11 +9,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+//        messageLabel
+//            .text = "Welcome"
+        print("👍 viewdidLoad")
     }
 
+//    @IBAction func messageButtonPressed(_ sender: UIButton) {
+//        print("😎 messageButtonPressed")
+//        messageLabel .text = "peek-a-boo"
+//    }
+    
+    @IBAction func ButtonTouchUp(_ sender: UIButton) {
+        print("👆touchUp")
+        messageLabel
+            .text = "peek-a-boo"
+    }
+    
 
+    @IBAction func ButtonTouchDown(_ sender: UIButton) {
+        print("👇🏻touchDown")
+        messageLabel
+            .text = "peek 🤡"
+    }
+    @IBAction func newMessage(_ sender: UIButton) {
+        messageLabel
+            .text = "finally a working app"
+    }
 }
 
